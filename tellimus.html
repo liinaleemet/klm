@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tellimuse esitamine • KLM mood</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>KLM mood</h1>
+  </header>
+
+  <main class="container">
+    <h1 class="checkout-title">Tellimuse esitamine</h1>
+
+    <section class="panel cart">
+      <h2>Ostukorv</h2>
+
+      <div class="cart-table">
+        <div class="cart-head">
+          <span>Toode</span>
+          <span>Hind</span>
+          <span>Kogus</span>
+          <span>Summa</span>
+        </div>
+
+        <div class="cart-row" data-price="25">
+          <div class="cart-prod">
+            <img src="img/toode1.png" alt="Kaabu">
+            <span>Kaabu</span>
+          </div>
+          <div class="cart-price">25 €</div>
+          <div class="cart-quantity">
+            <button class="quantity-button" data-step="-1">−</button>
+            <input type="number" min="0" value="1" inputmode="numeric">
+            <button class="quantity-button" data-step="1">+</button>
+          </div>
+          <div class="cart-line">25 €</div>
+        </div>
+
+        <div class="cart-row" data-price="10">
+          <div class="cart-prod">
+            <img src="img/sargid.png" alt="T-särk">
+            <span>T-särk</span>
+          </div>
+          <div class="cart-price">10 €</div>
+          <div class="cart-quantity">
+            <button class="quantity-button" data-step="-1">−</button>
+            <input type="number" min="0" value="2" inputmode="numeric">
+            <button class="quantity-button" data-step="1">+</button>
+          </div>
+          <div class="cart-line">20 €</div>
+        </div>
+
+        <div class="cart-row" data-price="30">
+          <div class="cart-prod">
+            <img src="img/teksad.jpg" alt="Lühikesed teksad">
+            <span>Lühikesed teksad</span>
+          </div>
+          <div class="cart-price">30 €</div>
+          <div class="cart-quantity">
+            <button class="quantity-button" data-step="-1">−</button>
+            <input type="number" min="0" value="1" inputmode="numeric">
+            <button class="quantity-button" data-step="1">+</button>
+          </div>
+          <div class="cart-line">30 €</div>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <div class="sum-line"><span>Vahekokkuvõte</span><strong id="subtotal">75 €</strong></div>
+        <div class="sum-line">
+          <label for="shipping">Transport</label>
+          <select id="shipping">
+            <option value="0">Pakiautomaat – 0 € (kampaania)</option>
+            <option value="2.99">Kuller – 2,99 €</option>
+            <option value="0">Tulen ise järele – 0 €</option>
+          </select>
+        </div>
+        <div class="sum-line total"><span>Kokku</span><strong id="grand">75 €</strong></div>
+      </div>
+    </section>
+
+    <section class="checkout-grid">
+      <form class="panel checkout-form">
+        <h2>Kliendi andmed</h2>
+        <div class="grid2">
+          <div>
+            <label for="eesnimi">Eesnimi</label>
+            <input id="eesnimi" type="text" placeholder="Eesnimi" required>
+          </div>
+          <div>
+            <label for="perenimi">Perenimi</label>
+            <input id="perenimi" type="text" placeholder="Perenimi" required>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div>
+            <label for="email">E-post</label>
+            <input id="email" type="email" placeholder="nimi@meil.ee" required>
+          </div>
+          <div>
+            <label for="telefon">Telefon</label>
+            <input id="telefon" type="tel" placeholder="+372 ...." required>
+          </div>
+        </div>
+
+        <div>
+          <label for="aadress">Aadress</label>
+          <input id="aadress" type="text" placeholder="Tänav ja maja/korter" required>
+        </div>
+
+        <div class="grid3">
+          <div>
+            <label for="linn">Linn</label>
+            <input id="linn" type="text" placeholder="Tallinn">
+          </div>
+          <div>
+            <label for="postiindeks">Postiindeks</label>
+            <input id="postiindeks" type="text" placeholder="10111">
+          </div>
+          <div>
+            <label for="riik">Riik</label>
+            <select id="riik">
+              <option>Eesti</option>
+              <option>Soome</option>
+              <option>Läti</option>
+            </select>
+          </div>
+        </div>
+
+        <h2>Tarne</h2>
+        <div class="grid2">
+          <label class="radio"><input type="radio" name="tarne" checked> Pakiautomaat</label>
+          <label class="radio"><input type="radio" name="tarne"> Kuller</label>
+        </div>
+
+        <h2>Makse</h2>
+        <div class="grid2">
+          <label class="radio"><input type="radio" name="makse" checked> Kaardimakse</label>
+          <label class="radio"><input type="radio" name="makse"> Pangaülekanne</label>
+        </div>
+
+        <button class="button">Esita tellimus</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2>KLM Mood</h2>
+    <nav class="social">
+      <img src="img/instagram-32.png" alt="Instagram">
+      <img src="img/facebook-3-32.png" alt="Facebook">
+      <img src="img/youtube-6-32.png" alt="YouTube">
+    </nav>
+  </footer>
+</body>
+</html>
