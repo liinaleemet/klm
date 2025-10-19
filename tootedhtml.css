@@ -1,0 +1,168 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0;}
+
+body {
+  background: #DFF1FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body > * {
+    padding: 40px;
+    max-width: 1200px;
+}
+
+body * {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+a.btn {
+    background-color: #FFE2D5;
+    color: #1a1a1a;
+    font-weight: bold;
+    border-color: #FFE2D5;
+}
+
+a.btn:hover {
+    background-color: #ffc4a9;
+    text-decoration: none;
+    border-color: #ffc4a9;
+    color: #1a1a1a;
+}
+
+
+div.card {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+div.card .card-title {
+    font-weight: bold;
+}
+
+div.card .card-body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.card .card-text {
+    font-weight: 500;
+    color: gray;
+}
+
+div.card h3 {
+    margin-bottom: 20px;
+}
+
+.tooted > div > div {
+    margin-bottom: -40px;
+}
+
+/* Toote pildi wrapper */
+.tooted > div > div > div {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 250px;
+    border-radius: 8px;
+}
+.tooted img {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(200, 200, 200, 1); 
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+}
+
+.tooted h3 {
+    position: relative;
+    top: -170px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 36px;
+}
+
+
+header {
+    background-image: url(img/klm.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: inset 0 0 1000px 25px;
+}
+
+header img {
+    vertical-align: top;
+    width: 100%;
+    opacity: 0;
+    margin-bottom: -40px;
+}
+
+header div {
+    position: absolute;
+}
+
+header h1, header p {
+    font-size: 5vw;
+    font-weight: bolder;
+    color: #FFE2D5;
+}
+
+header p {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+footer {
+    color: #FFE2D5;
+    padding-top: 40px;
+    background-color: #92CBE6;
+    width: 100%;
+    text-align: center;
+}
+
+footer > h1 {
+    background-color: #92CBE6;
+    width: 100%;
+    text-align: center;
+    color: #FFE2D5;
+}
+
+.social {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.social img {
+  border-radius: 100%;
+  width: 20px; height: 20px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
