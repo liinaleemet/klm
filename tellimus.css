@@ -1,0 +1,147 @@
+img {
+    max-width: 128px;
+    border-radius: 10px;
+}
+
+.cart-row {
+    border-bottom: 1px solid #ddd;
+
+    .cart-line:last-child {
+        text-align: center;
+        font-weight: 700;
+        font-size:24px;
+    }
+}
+
+.cart-prod {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.toode-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+
+    h1 {
+        margin: 0;
+    }
+}
+
+.price {
+    text-align: left;
+}
+@media screen and (max-width: 760px) {
+    .cart-head {
+        flex-direction: column;
+        align-items: flex-start;
+
+        span:not( .toode-header-mobile ) {
+            display: none;
+        }
+    }
+
+    .cart-row {
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 1rem;
+        padding-bottom: 15px;
+    }
+
+    .cart-line {
+        grid-column: 3 / 4;
+        grid-row: 2 / 2;
+
+        margin-top: 0;
+        margin-bottom: auto;
+    }
+
+    .cart-quantity {
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    .cart-prod {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+}
+
+
+@media screen and (max-width: 570px) {
+    .cart-row {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto 1fr;
+    }
+
+    .cart-head {
+        display: none;
+    }
+
+    .cart-prod {
+        grid-row: 1 / 1;
+        grid-column: 1 / 3;
+    }
+
+    .cart-line {
+        grid-row: 2;
+        grid-column: 2;
+        justify-self: end;
+    }
+
+    .cart-quantity {
+        grid-row: 2;
+        grid-column: 1;
+        width: fit-content;
+        justify-self: end;
+    }
+
+    .toode-info {
+        width: 100%;
+    }
+
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 10px;
+
+    label {
+        position: relative;
+        padding: 6px 10px;
+        text-align: center;
+        margin-bottom: 0;
+        
+        input {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+        }
+
+        &:has( input:checked ) {
+            background: #9999d0;
+            font-weight: 700;
+            border-radius: 10px;
+        }
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit {
+    margin-left: auto;
+    margin-right: 10;
+    cursor: pointer;
+}

@@ -166,3 +166,6 @@ footer > h1 {
   justify-content: center;
   text-decoration: none;
 }
+
+
+.flex { display: flex; }
