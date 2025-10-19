@@ -69,8 +69,14 @@ div.card h3 {
     margin-bottom: 20px;
 }
 
+
 div.card-group > * {
     margin: 0 10px 0 10px;
+    height: 300px;
+}
+
+div.card-group > div.card > .card-img-top {
+    height: 50%;
 }
 
 
@@ -96,6 +102,15 @@ div.card-group > * {
         padding: 0;
         margin: 0;
     }
+
+    div.card-group > * {
+        margin: 0;
+        height: fit-content;
+    }
+
+    div.card-group > div.card > .card-img-top {
+        height: auto;
+    }
 }
 
 
@@ -116,52 +131,6 @@ footer > h1, nav > h1 {
     width: 100%;
     text-align: center;
     color: #FFE2D5;
-}
-
-.meist {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-    width: 100%;
-    height: 550px;
-    overflow: hidden;
-}
-
-.meist-tekst {
-    padding: 40px;
-    height: 500px;
-    background-color:   #92CBE6;
-    width: calc(100% - 520px);
-}
-
-.meist-pilt {
-    width: 500px;
-    height: 500px;
-    padding-right: 20px;
-    overflow: hidden;
-    margin-right: -20px;
-}
-
-@media screen and (max-width: 768px) {
-    .meist {
-        flex-direction: column;
-        height: auto;
-        padding: 40px;
-    }
-    .meist-tekst, .meist-pilt {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: -10px;
-    }
-    .meist-pilt {
-        padding: 0;
-        padding-top:20px;
-        margin: 0;
-        margin-top:-20px;
-    }
-    
 }
 
 .social {
